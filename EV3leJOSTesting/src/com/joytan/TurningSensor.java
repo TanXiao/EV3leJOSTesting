@@ -22,7 +22,7 @@ public class TurningSensor
 		gyroSensor.reset();
 	}
 	
-	float getAngle() {
+	public float getAngle() {
 		gProvider.fetchSample(gyroReader, 0);
 		return gyroReader[0];
 	}
