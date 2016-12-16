@@ -19,9 +19,11 @@ public class Main {
 		TuringController turingController = new TuringController();
 		LCD.drawString("Ready", 0, 0);
 		buttons.waitForAnyPress();
-		motor.forward();
-		turingController.turnVihecle(90);
-		buttons.waitForAnyPress();
+		while (buttons.getButtons() != Keys.ID_ESCAPE){
+			motor.forward();
+			turingController.turnVihecle(90);
+			buttons.waitForAnyPress();
+		}
 	}
 
 	
